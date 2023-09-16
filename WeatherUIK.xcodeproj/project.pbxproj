@@ -16,6 +16,9 @@
 		F6A6E7622AABA23E00D13482 /* WeatherUIKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E7612AABA23E00D13482 /* WeatherUIKTests.swift */; };
 		F6A6E76C2AABA23E00D13482 /* WeatherUIKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E76B2AABA23E00D13482 /* WeatherUIKUITests.swift */; };
 		F6A6E76E2AABA23E00D13482 /* WeatherUIKUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E76D2AABA23E00D13482 /* WeatherUIKUITestsLaunchTests.swift */; };
+		F6A6E77B2AAE5E9E00D13482 /* WeatherDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E77A2AAE5E9E00D13482 /* WeatherDetailVC.swift */; };
+		F6A6E77D2AAF556F00D13482 /* CityListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E77C2AAF556F00D13482 /* CityListVC.swift */; };
+		F6A6E7802AB6038C00D13482 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A6E77F2AB6038C00D13482 /* NetworkClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		F6A6E7672AABA23E00D13482 /* WeatherUIKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherUIKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A6E76B2AABA23E00D13482 /* WeatherUIKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUIKUITests.swift; sourceTree = "<group>"; };
 		F6A6E76D2AABA23E00D13482 /* WeatherUIKUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherUIKUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F6A6E77A2AAE5E9E00D13482 /* WeatherDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailVC.swift; sourceTree = "<group>"; };
+		F6A6E77C2AAF556F00D13482 /* CityListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityListVC.swift; sourceTree = "<group>"; };
+		F6A6E77F2AB6038C00D13482 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +105,14 @@
 		F6A6E7492AABA23D00D13482 /* WeatherUIK */ = {
 			isa = PBXGroup;
 			children = (
+				F6A6E7822AB6054000D13482 /* View Controllers */,
+				F6A6E77E2AB6037900D13482 /* Network */,
+				F6A6E7582AABA23E00D13482 /* Info.plist */,
 				F6A6E74A2AABA23D00D13482 /* AppDelegate.swift */,
 				F6A6E74C2AABA23D00D13482 /* SceneDelegate.swift */,
-				F6A6E74E2AABA23D00D13482 /* ViewController.swift */,
-				F6A6E7502AABA23D00D13482 /* Main.storyboard */,
 				F6A6E7532AABA23E00D13482 /* Assets.xcassets */,
 				F6A6E7552AABA23E00D13482 /* LaunchScreen.storyboard */,
-				F6A6E7582AABA23E00D13482 /* Info.plist */,
+				F6A6E7502AABA23D00D13482 /* Main.storyboard */,
 			);
 			path = WeatherUIK;
 			sourceTree = "<group>";
@@ -125,6 +132,24 @@
 				F6A6E76D2AABA23E00D13482 /* WeatherUIKUITestsLaunchTests.swift */,
 			);
 			path = WeatherUIKUITests;
+			sourceTree = "<group>";
+		};
+		F6A6E77E2AB6037900D13482 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				F6A6E77F2AB6038C00D13482 /* NetworkClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F6A6E7822AB6054000D13482 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F6A6E77C2AAF556F00D13482 /* CityListVC.swift */,
+				F6A6E74E2AABA23D00D13482 /* ViewController.swift */,
+				F6A6E77A2AAE5E9E00D13482 /* WeatherDetailVC.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +283,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A6E7802AB6038C00D13482 /* NetworkClient.swift in Sources */,
+				F6A6E77D2AAF556F00D13482 /* CityListVC.swift in Sources */,
+				F6A6E77B2AAE5E9E00D13482 /* WeatherDetailVC.swift in Sources */,
 				F6A6E74F2AABA23D00D13482 /* ViewController.swift in Sources */,
 				F6A6E74B2AABA23D00D13482 /* AppDelegate.swift in Sources */,
 				F6A6E74D2AABA23D00D13482 /* SceneDelegate.swift in Sources */,
@@ -445,6 +473,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,9 +481,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pl.pawelmichalak.WeatherUIK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +505,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,9 +513,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = pl.pawelmichalak.WeatherUIK;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
