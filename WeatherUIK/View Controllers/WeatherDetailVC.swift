@@ -10,13 +10,19 @@ import UIKit
 class WeatherDetailVC: UIViewController {
     
     var weather: WeatherData
+    var forecast: [WeatherForecastData]?
+    var cityData: CityData
 
     let closeButton = UIButton()
+    let dateTextView = UITextView()
+    let cityTextView = UITextView()
     let temperatureTextView = UITextView()
     let networkClient = NetworkClient()
     
-    init(weatherData: WeatherData) {
+    init(weatherData: WeatherData, weatherForecast: [WeatherForecastData]?, cityData: CityData) {
         self.weather = weatherData
+        self.forecast = weatherForecast
+        self.cityData = cityData
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -29,9 +35,13 @@ class WeatherDetailVC: UIViewController {
         view.backgroundColor = .white
 
         setupCloseButton()
+        setupDateTextView()
+        setupCityTextView()
         setupTemperatureInfo()
         
         setupLayout()
+        
+        print("Forecast: ", forecast)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +49,26 @@ class WeatherDetailVC: UIViewController {
         navigationController?.navigationBar.isHidden = true
     }
     
+    func setupDateTextView() {
+        view.addSubview(dateTextView)
+        
+        dateTextView.text = weather.dateForWeather
+        dateTextView.font = .preferredFont(forTextStyle: .title1)
+        dateTextView.textColor = .black
+        dateTextView.translatesAutoresizingMaskIntoConstraints = false
+        dateTextView.textAlignment = .center
+    }
+    
+    func setupCityTextView() {
+        view.addSubview(cityTextView)
+
+        cityTextView.text = cityData.EnglishName
+        cityTextView.font = .preferredFont(forTextStyle: .largeTitle)
+        cityTextView.textColor = .black
+        cityTextView.translatesAutoresizingMaskIntoConstraints = false
+        cityTextView.textAlignment = .center
+    }
+        
     func setupTemperatureInfo() {
         view.addSubview(temperatureTextView)
         
@@ -81,10 +111,20 @@ class WeatherDetailVC: UIViewController {
             closeButton.widthAnchor.constraint(equalToConstant: 60),
             closeButton.heightAnchor.constraint(equalToConstant: 60),
             
+            dateTextView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 100),
+            dateTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            dateTextView.heightAnchor.constraint(equalToConstant: 60),
+            dateTextView.widthAnchor.constraint(equalToConstant: 200),
+            
+            cityTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            cityTextView.topAnchor.constraint(equalTo: dateTextView.bottomAnchor),
+            cityTextView.heightAnchor.constraint(equalToConstant: 60),
+            cityTextView.widthAnchor.constraint(equalToConstant: 200),
+            
             temperatureTextView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            temperatureTextView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-            temperatureTextView.heightAnchor.constraint(equalToConstant: 200),
-            temperatureTextView.widthAnchor.constraint(equalToConstant: 200)
+            temperatureTextView.topAnchor.constraint(equalTo: cityTextView.bottomAnchor, constant: 100),
+            temperatureTextView.heightAnchor.constraint(equalToConstant: 120),
+            temperatureTextView.widthAnchor.constraint(equalToConstant: 200),
         ])
     }
     

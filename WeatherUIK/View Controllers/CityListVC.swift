@@ -70,9 +70,12 @@ extension CityListVC: UITableViewDataSource, UITableViewDelegate {
             persistanceClient.add(cityData: citiesArray[indexPath.row])
         }
         Task {
-            let weatherData = try await networkClient.weatherDataFor(cityData: citiesArray[indexPath.row])
+            async let weatherData = networkClient.weatherDataFor(cityData: citiesArray[indexPath.row])
+            async let weatherForecastData = networkClient.weatherForecastFor(cityData: citiesArray[indexPath.row])
+            
+            let (weather, forecast) = (try await weatherData, try? await weatherForecastData)
             await MainActor.run {
-                let weatherDetailsVC = WeatherDetailVC(weatherData: weatherData)
+                let weatherDetailsVC = WeatherDetailVC(weatherData: weather, weatherForecast: forecast, cityData: citiesArray[indexPath.row])
                 navigationController?.pushViewController(weatherDetailsVC, animated: true)
                 activityView.stopAnimating()
             }

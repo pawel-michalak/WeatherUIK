@@ -8,6 +8,7 @@
 import Foundation
 
 struct WeatherData: Codable {
+    let EpochTime: Double
     let WeatherText: String
     let WeatherIcon: Int
     let Temperature: TemperatureData
@@ -21,11 +22,34 @@ struct WeatherData: Codable {
     }
 }
 
-struct TemperatureData: Codable {
-    let Metric: MetricData
+extension WeatherData {
+    var dateForWeather: String {
+        let date = Date(timeIntervalSince1970: EpochTime)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "EEEE d.MM"
+        return formatter.string(from: date)
+    }
 }
 
-struct MetricData: Codable {
+struct WeatherForecastData: Codable {
+    let DailyForecasts: DailyForecasts
+}
+
+struct DailyForecasts: Codable {
+    let EpochDate: Double
+    let Temperature: Temperature
+}
+
+struct Temperature: Codable {
+    let Minimum: TemperatureValue
+    let Maximum: TemperatureValue
+}
+
+struct TemperatureData: Codable {
+    let Metric: TemperatureValue
+}
+
+struct TemperatureValue: Codable {
     let Value: Double
     let Unit: String
 }

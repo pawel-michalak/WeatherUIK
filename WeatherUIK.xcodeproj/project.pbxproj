@@ -113,12 +113,12 @@
 		F6A6E7492AABA23D00D13482 /* WeatherUIK */ = {
 			isa = PBXGroup;
 			children = (
-				F6A6E78B2AB75F9100D13482 /* Storage */,
 				F6A6E7882AB75F4700D13482 /* Cells */,
-				F6A6E7852AB7372E00D13482 /* Model */,
 				F6A6E7842AB7348B00D13482 /* Common */,
 				F6A6E7832AB7345F00D13482 /* Delegate */,
+				F6A6E7852AB7372E00D13482 /* Model */,
 				F6A6E77E2AB6037900D13482 /* Network */,
+				F6A6E78B2AB75F9100D13482 /* Storage */,
 				F6A6E7822AB6054000D13482 /* View Controllers */,
 			);
 			path = WeatherUIK;

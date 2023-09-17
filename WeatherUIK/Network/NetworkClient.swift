@@ -15,8 +15,12 @@ protocol WeatherDataProtocol {
     func weatherDataFor(cityData: CityData) async throws -> WeatherData
 }
 
+protocol WeatherForecastProtocol {
+    func weatherForecastFor(cityData: CityData) async throws -> [WeatherForecastData]
+}
+
 struct NetworkClient {
-    private let API_KEY = "L6Tf6KQvFJI3I5qnj9hjxnF0qcAbepf4"
+    private let API_KEY = "XkuwMiseGzkqAfIJWIiRM3GpxNTwKma1"
 }
 
 enum WeatherAPIError: Error {
@@ -66,5 +70,21 @@ extension NetworkClient: WeatherDataProtocol {
         print("This is weather: ", weatherArray[0])
         
         return weatherArray[0]
+    }
+}
+
+extension NetworkClient: WeatherForecastProtocol {
+    func weatherForecastFor(cityData: CityData) async throws -> [WeatherForecastData] {
+        guard !API_KEY.isEmpty else { fatalError("Please provide API KEY") }
+        let url = URL(string: "https://dataservice.accuweather.com/forecasts/v1/daily/5day/\(cityData.Key)?apikey=\(API_KEY)?metric=true")!
+        let (data, response) = try await URLSession.shared.data(from: url)
+        
+        guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
+            throw WeatherAPIError.responseError
+        }
+
+        let weatherForecastArray = try JSONDecoder().decode([WeatherForecastData].self, from: data)
+        print("Forecast: ", weatherForecastArray)
+        return weatherForecastArray
     }
 }

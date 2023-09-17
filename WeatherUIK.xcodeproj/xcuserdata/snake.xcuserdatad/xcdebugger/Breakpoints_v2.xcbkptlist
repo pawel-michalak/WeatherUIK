@@ -484,10 +484,42 @@
             filePath = "WeatherUIK/Network/NetworkClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
             landmarkName = "searchFor(city:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a9688ab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.searchFor(city: Swift.String) async throws -&gt; Swift.Array&lt;WeatherUIK.CityData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "40"
+                  endingLineNumber = "40"
+                  offsetFromSymbolStart = "692">
+               </Location>
+               <Location
+                  uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a96888a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.searchFor(city: Swift.String) async throws -&gt; Swift.Array&lt;WeatherUIK.CityData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "39"
+                  endingLineNumber = "39"
+                  offsetFromSymbolStart = "1548">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -536,6 +568,316 @@
             endingLineNumber = "196"
             landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB647726-3535-4E97-A29A-585D71F38430"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherUIK/Network/NetworkClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "weatherForecastFor(cityData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbb77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "164">
+               </Location>
+               <Location
+                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbb77"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "86"
+                  endingLineNumber = "86"
+                  offsetFromSymbolStart = "372">
+               </Location>
+               <Location
+                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbbd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "1112">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherUIK/Network/NetworkClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "weatherForecastFor(cityData:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1 - 8a88e4ff805db89e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "93"
+                  endingLineNumber = "93"
+                  offsetFromSymbolStart = "508">
+               </Location>
+               <Location
+                  uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1 - 8a88e4ff805dbb31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "88"
+                  endingLineNumber = "88"
+                  offsetFromSymbolStart = "880">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A6E1169-8A84-445B-B056-E328ED3048B9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherUIK/Network/NetworkClient.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "weatherForecastFor(cityData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherUIK/View Controllers/CityListVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 8db558010b14751b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "216">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - d5321fab69ea9fd2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 58789b0425b2b165"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "100">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 370cda0f5fd9cd67"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "228">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 29b351d7d3a86355"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
+                  offsetFromSymbolStart = "196">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 8db558010b14753a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(5) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - d5321fab69ea9ff3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(6) await resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 58789b0425b2b144"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - ea2fa89b2ee1347"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - dd85638546985fb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(16) suspend resume partial function for closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "77"
+                  endingLineNumber = "77"
+                  offsetFromSymbolStart = "200">
+               </Location>
+               <Location
+                  uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8 - 29b351d7d3a860ba"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Swift.MainActor @Sendable () -&gt; () in closure #2 @Sendable () async throws -&gt; () in WeatherUIK.CityListVC.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/View%20Controllers/CityListVC.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
+                  offsetFromSymbolStart = "160">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

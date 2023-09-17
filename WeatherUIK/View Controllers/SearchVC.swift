@@ -211,9 +211,12 @@ extension SearchVC: UITableViewDataSource, UITableViewDelegate {
         activityView.startAnimating()
 
         Task { [cities = recentCities] in
-            let weatherData = try await networkClient.weatherDataFor(cityData: cities[indexPath.row])
+            async let weatherData = networkClient.weatherDataFor(cityData: cities[indexPath.row])
+            async let weatherForecastData = networkClient.weatherForecastFor(cityData: cities[indexPath.row])
+            
+            let (weather, forecast) = (try await weatherData, try? await weatherForecastData)
             await MainActor.run {
-                let weatherDetailsVC = WeatherDetailVC(weatherData: weatherData)
+                let weatherDetailsVC = WeatherDetailVC(weatherData: weather, weatherForecast: forecast, cityData: recentCities[indexPath.row])
                 navigationController?.pushViewController(weatherDetailsVC, animated: true)
                 activityView.stopAnimating()
             }
