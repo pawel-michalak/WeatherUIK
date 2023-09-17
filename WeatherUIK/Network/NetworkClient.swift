@@ -20,7 +20,7 @@ protocol WeatherForecastProtocol {
 }
 
 struct NetworkClient {
-    private let API_KEY = "XkuwMiseGzkqAfIJWIiRM3GpxNTwKma1"
+    private let API_KEY = ""
 }
 
 enum WeatherAPIError: Error {
@@ -46,7 +46,6 @@ extension NetworkClient: CitySearchProtocol {
         }
         
         print("This are cities: ", cities)
-        
         return cities
     }
 }
@@ -68,7 +67,6 @@ extension NetworkClient: WeatherDataProtocol {
         }
         
         print("This is weather: ", weatherArray[0])
-        
         return weatherArray[0]
     }
 }
@@ -84,6 +82,7 @@ extension NetworkClient: WeatherForecastProtocol {
         }
 
         let weatherForecastArray = try JSONDecoder().decode([WeatherForecastData].self, from: data)
+        
         print("Forecast: ", weatherForecastArray)
         return weatherForecastArray
     }

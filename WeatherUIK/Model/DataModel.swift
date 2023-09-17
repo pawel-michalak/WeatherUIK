@@ -18,7 +18,7 @@ struct WeatherData: Codable {
     }
     
     var temperatureDescription: String {
-        return "\(Temperature.Metric.Value) \(Temperature.Metric.Unit)"
+        return "\(Temperature.Metric.Value)° \(Temperature.Metric.Unit)"
     }
 }
 

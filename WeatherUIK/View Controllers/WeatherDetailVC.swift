@@ -40,8 +40,6 @@ class WeatherDetailVC: UIViewController {
         setupTemperatureInfo()
         
         setupLayout()
-        
-        print("Forecast: ", forecast)
     }
     
     override func viewWillAppear(_ animated: Bool) {

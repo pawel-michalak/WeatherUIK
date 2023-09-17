@@ -490,7 +490,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a9688ab"
+                  uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a96886d"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -500,9 +500,24 @@
                   urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "40"
-                  endingLineNumber = "40"
-                  offsetFromSymbolStart = "692">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "224">
+               </Location>
+               <Location
+                  uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a96886d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.searchFor(city: Swift.String) async throws -&gt; Swift.Array&lt;WeatherUIK.CityData&gt;"
+                  moduleName = "WeatherUIK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "38"
+                  endingLineNumber = "38"
+                  offsetFromSymbolStart = "448">
                </Location>
                <Location
                   uuid = "61605DCC-98DC-48A6-83FD-E648B945139D - c8ab63385a96888a"
@@ -574,125 +589,46 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "CB647726-3535-4E97-A29A-585D71F38430"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherUIK/Network/NetworkClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "weatherForecastFor(cityData:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbb77"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
-                  moduleName = "WeatherUIK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "164">
-               </Location>
-               <Location
-                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbb77"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
-                  moduleName = "WeatherUIK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "372">
-               </Location>
-               <Location
-                  uuid = "CB647726-3535-4E97-A29A-585D71F38430 - 8a88e4ff805dbbd4"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
-                  moduleName = "WeatherUIK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "83"
-                  endingLineNumber = "83"
-                  offsetFromSymbolStart = "1112">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherUIK/Network/NetworkClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "weatherForecastFor(cityData:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1 - 8a88e4ff805db89e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
-                  moduleName = "WeatherUIK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "93"
-                  endingLineNumber = "93"
-                  offsetFromSymbolStart = "508">
-               </Location>
-               <Location
-                  uuid = "C9817BB6-7DA1-4DAB-A865-C7B81FF73AC1 - 8a88e4ff805dbb31"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for WeatherUIK.NetworkClient.weatherForecastFor(cityData: WeatherUIK.CityData) async throws -&gt; Swift.Array&lt;WeatherUIK.WeatherForecastData&gt;"
-                  moduleName = "WeatherUIK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/snake/Projects/WeatherUIK/WeatherUIK/Network/NetworkClient.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "880">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6A6E1169-8A84-445B-B056-E328ED3048B9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherUIK/Network/NetworkClient.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "weatherForecastFor(cityData:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -701,7 +637,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1ECB3CAB-54BE-4785-BAA8-CA158EC4B5E8"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "WeatherUIK/View Controllers/CityListVC.swift"
