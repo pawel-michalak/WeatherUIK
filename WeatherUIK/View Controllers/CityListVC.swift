@@ -9,9 +9,12 @@ import UIKit
 
 class CityListVC: UIViewController {
     
+    var networkClient = NetworkClient()
+    var persistanceClient = PersistanceClient()
+    
     let citiesArray: [CityData]
     let tableView = UITableView()
-    let networkClient = NetworkClient()
+    let activityView = UIActivityIndicatorView(style: .medium)
     
     init(citiesArray: [CityData]) {
         self.citiesArray = citiesArray
@@ -22,6 +25,21 @@ class CityListVC: UIViewController {
         fatalError("Not implemented")
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        configureTableView()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: activityView)
+        view.backgroundColor = .white
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.topItem?.backButtonTitle = "Search"
+        navigationController?.navigationBar.isHidden = false
+        title = "Cities found"
+    }
+    
     func configureTableView() {
         view.addSubview(tableView)
         tableView.frame = view.bounds
@@ -29,19 +47,7 @@ class CityListVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(CityTVCell.self, forCellReuseIdentifier: CityTVCell.reusableID)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configureTableView()
-        navigationController?.navigationBar.topItem?.backButtonTitle = "Search"
-        view.backgroundColor = .white
-        title = "Cities found"
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        navigationController?.navigationBar.isHidden = false
+        tableView.register(CityCell.self, forCellReuseIdentifier: CityCell.reusableID)
     }
 }
 
@@ -51,58 +57,25 @@ extension CityListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CityTVCell.reusableID) as! CityTVCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: CityCell.reusableID) as! CityCell
         let city = citiesArray[indexPath.row]
         cell.set(cityData: city)
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Move to another VC here
+        activityView.startAnimating()
+        
         Task {
-            networkClient.searchFor(city:)
+            persistanceClient.add(cityData: citiesArray[indexPath.row])
         }
-        
-        let detailsVC = WeatherDetailVC(cityData: citiesArray[indexPath.row])
-        navigationController?.pushViewController(detailsVC, animated: true)
-    }
-}
-
-class CityTVCell: UITableViewCell {
-    
-    static let reusableID = "CityCell"
-    // FIXME: rename
-    let textView = UILabel()
-    
-    func set(cityData: CityData) {
-        textView.text = """
-            \(cityData.EnglishName), \(cityData.AdministrativeArea.EnglishName)
-            \(cityData.Country.EnglishName)
-        """
-    }
-    
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .default, reuseIdentifier: CityTVCell.reusableID)
-        
-        addSubview(textView)
-        textView.numberOfLines = 0
-        textView.textColor = .black
-        textView.backgroundColor = .clear
-        textView.translatesAutoresizingMaskIntoConstraints = false
-        textView.font = .boldSystemFont(ofSize: 20)
-        
-        let padding: CGFloat = 24
-        
-        NSLayoutConstraint.activate([
-            textView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            textView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: padding),
-            textView.widthAnchor.constraint(equalToConstant: 300),
-            textView.heightAnchor.constraint(equalToConstant: 60)
-        ])
-        
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        Task {
+            let weatherData = try await networkClient.weatherDataFor(cityData: citiesArray[indexPath.row])
+            await MainActor.run {
+                let weatherDetailsVC = WeatherDetailVC(weatherData: weatherData)
+                navigationController?.pushViewController(weatherDetailsVC, animated: true)
+                activityView.stopAnimating()
+            }
+        }
     }
 }

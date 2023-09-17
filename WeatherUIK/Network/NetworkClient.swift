@@ -15,24 +15,33 @@ protocol WeatherDataProtocol {
     func weatherDataFor(cityData: CityData) async throws -> WeatherData
 }
 
-struct NetworkClient {}
+struct NetworkClient {
+    private let API_KEY = "L6Tf6KQvFJI3I5qnj9hjxnF0qcAbepf4"
+}
+
+enum WeatherAPIError: Error {
+    case responseError, noDataFound
+}
 
 extension NetworkClient: CitySearchProtocol {
     func searchFor(city: String) async throws -> [CityData] {
-        print("Started sleep")
+        guard !API_KEY.isEmpty else { fatalError("Please provide API KEY") }
+        
         let encCity = city.addingPercentEncoding(withAllowedCharacters: .alphanumerics)!
-        let url = URL(string: "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=WG57ASHO2I73JrqtX1XZrWAZGvFdE4Ji&q=\(encCity)")!
+        let url = URL(string: "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=\(API_KEY)&q=\(encCity)")!
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw WeatherAPIError.responseError
         }
         
-        let decoder = JSONDecoder()
-        let cities = try decoder.decode([CityData].self, from: data)
+        let cities = try JSONDecoder().decode([CityData].self, from: data)
+        
+        guard !cities.isEmpty else {
+            throw WeatherAPIError.noDataFound
+        }
         
         print("This are cities: ", cities)
-        print("Ended sleep")
         
         return cities
     }
@@ -40,20 +49,22 @@ extension NetworkClient: CitySearchProtocol {
 
 extension NetworkClient: WeatherDataProtocol {
     func weatherDataFor(cityData: CityData) async throws -> WeatherData {
-        let url = URL(string: "https://dataservice.accuweather.com/currentconditions/v1/\(cityData.Key)?apikey=WG57ASHO2I73JrqtX1XZrWAZGvFdE4Ji")!
+        guard !API_KEY.isEmpty else { fatalError("Please provide API KEY") }
+        let url = URL(string: "https://dataservice.accuweather.com/currentconditions/v1/\(cityData.Key)?apikey=\(API_KEY)")!
         let (data, response) = try await URLSession.shared.data(from: url)
         
         guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
             throw WeatherAPIError.responseError
         }
         
-        let decoder = JSONDecoder()
-        let weather = try decoder.decode([WeatherData].self, from: data)
+        let weatherArray = try JSONDecoder().decode([WeatherData].self, from: data)
         
-        print("This is weather: ", weather[0])
-        print("Ended sleep")
+        guard !weatherArray.isEmpty else {
+            throw WeatherAPIError.noDataFound
+        }
         
-        //Adjust this
-        return weather[0]
+        print("This is weather: ", weatherArray[0])
+        
+        return weatherArray[0]
     }
 }

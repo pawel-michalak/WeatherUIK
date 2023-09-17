@@ -10,8 +10,7 @@ import UIKit
 class WeatherDetailVC: UIViewController {
     
     var weather: WeatherData
-//    let cityData: CityData
-    
+
     let closeButton = UIButton()
     let temperatureTextView = UITextView()
     let networkClient = NetworkClient()
@@ -27,12 +26,12 @@ class WeatherDetailVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
         setupCloseButton()
         setupTemperatureInfo()
         
         setupLayout()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -41,31 +40,24 @@ class WeatherDetailVC: UIViewController {
     }
     
     func setupTemperatureInfo() {
-        let tempValue = weather.Temperature.Metric.Value
-        
         view.addSubview(temperatureTextView)
         
-        temperatureTextView.text = tempValue.description
+        temperatureTextView.text = weather.temperatureDescription
         temperatureTextView.font = .preferredFont(forTextStyle: .largeTitle)
         temperatureTextView.textColor = .white
         temperatureTextView.translatesAutoresizingMaskIntoConstraints = false
         temperatureTextView.textAlignment = .center
         
-        switch tempValue {
-        case _ where tempValue < 10:
-            view.backgroundColor = .systemBlue
-            temperatureTextView.backgroundColor = .systemBlue
+        switch weather.temperatureValue {
+        case _ where weather.temperatureValue < 10:
+            temperatureTextView.textColor = .systemBlue
         case 10 ... 20:
-            view.backgroundColor = .black
-            temperatureTextView.backgroundColor = .black
-        case _ where tempValue > 20:
-            view.backgroundColor = .systemRed
-            temperatureTextView.backgroundColor = .systemRed
+            temperatureTextView.textColor = .black
+        case _ where weather.temperatureValue > 20:
+            temperatureTextView.textColor = .systemRed
         default:
-            view.backgroundColor = .white
             temperatureTextView.backgroundColor = .white
         }
-        
     }
     
     func setupCloseButton() {
@@ -75,7 +67,7 @@ class WeatherDetailVC: UIViewController {
         
         closeButton.setImage(image, for: .normal)
         closeButton.imageView?.contentMode = .scaleAspectFit
-        closeButton.tintColor = .white
+        closeButton.tintColor = .black
         closeButton.layer.cornerRadius = 5
         closeButton.setTitleColor(.white, for: .normal)
         closeButton.translatesAutoresizingMaskIntoConstraints = false
@@ -99,5 +91,4 @@ class WeatherDetailVC: UIViewController {
     @objc func closeButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
-
 }
